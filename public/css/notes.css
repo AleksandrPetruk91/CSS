@@ -291,3 +291,116 @@ input:invalid {
 .input:placeholder-shown ~ span {
   background-color: red;
 }
+
+/* Колір RGB плюс прозорість */
+.card > p {
+  color: rgba(196, 72, 72, 0.788);
+}
+
+/* Напрямок тексту з права на ліво і навпаки ltr */
+p {
+  direction: rtl;
+}
+
+/*Значення властивості за замовчуванням  */
+.card > p {
+  color: initial;
+}
+
+/* Знач. власт. успадковуються від батьківського тегу */
+.card > p {
+  color: inherit;
+}
+
+/* Знач. власт. успадковуються від батьківського тегу,якщо це можливо */
+.card > p {
+  color: unset;
+}
+
+/* Скачовує всі значення властивості */
+.card > p {
+  color: none;
+}
+
+/* Орієнтація тексту */
+div {
+  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
+}
+
+/* Вирівнюванн тексту */
+div {
+  text-align: center;
+  text-align: left;
+  text-align: right;
+}
+
+/* Зміна регістру букв */
+div {
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
+/* Встановлення розміру Tab */
+pre {
+  tab-size: 5;
+}
+
+/* Розмір між символами в тексті */
+p {
+  letter-spacing: normal;
+  letter-spacing: 1em;
+  letter-spacing: 1px;
+}
+
+/* Декорації то тексту */
+p {
+  text-decoration: underline dotted red;
+
+  text-decoration-line: underline;
+  text-decoration-line: overline;
+  text-decoration-line: line-through;
+
+  text-decoration-style: solid;
+  text-decoration-style: double;
+  text-decoration-style: dotted;
+  text-decoration-style: dashed;
+  text-decoration-style: wavy;
+
+  text-decoration-color: red;
+}
+
+/* Шрифт через google.fonts */
+body {
+  font-family: 'Roboto' sans-serif;
+}
+
+/* Розмір шрифту */
+
+p {
+  font-size: 2px;
+  font-size: small;
+  font-size: medium;
+  font-size: large;
+  font-size: xx-large;
+  font-size: smaller;
+  font-size: larger;
+}
+
+/* Жирність шрифта */
+p {
+  font-weight: 400;
+  font-weight: bolder;
+  font-weight: lighter;
+}
+
+/* Стиль шрифта */
+p {
+  font-style: italic;
+}
+
+/* Прогрузка шрифта */
+h1 {
+  font-display: swap;
+}
