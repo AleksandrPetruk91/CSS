@@ -404,3 +404,67 @@ p {
 h1 {
   font-display: swap;
 }
+
+/* Приховує даний контент */
+.test {
+  display: none;
+}
+
+/*Рядковий  елемент стає блочним */
+span {
+  display: block;
+}
+
+/* Блочний елемент стає лінійним */
+div {
+  display: inline;
+}
+
+/* Лінійний елемент стає блочно-лінійним*/
+em {
+  display: inline-block;
+}
+
+/* Відступи блоку */
+
+div {
+  margin: auto;
+  margin: 0%;
+  margin: 23px;
+}
+
+/* Ширина блоку */
+
+div {
+  /* Відносно бфтьківського блоку */
+  width: 50%;
+  /* По ширині контенту */
+  width: fit-content;
+  /* Мінімальна ширина контенту */
+  width: min-content;
+  width: max-content;
+}
+
+/* Внутрішні відступи */
+div {
+  padding: 12px;
+  padding: 0%;
+}
+
+/* Висота елементу */
+div {
+  height: 100p;
+  height: fit-content;
+  height: max-content;
+  height: min-content;
+}
+
+/* Мінімальга висота */
+div {
+  min-height: max-content;
+}
+
+/* Максимальна висота */
+div {
+  max-height: fit-content;
+}
