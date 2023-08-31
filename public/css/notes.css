@@ -468,3 +468,64 @@ div {
 div {
   max-height: fit-content;
 }
+
+/* внутрішня рамка */
+.footer {
+  border-top: 1px solid #dee2e6;
+  border-style: dashed;
+  border-style: dotted;
+  border-style: solid;
+  border-style: double;
+  border-style: groove;
+  border-style: ridge;
+}
+
+/* Зовнішня рамка */
+.footer {
+  outline: 1 px solid red;
+}
+
+/* Відступ рамки до контенту */
+.card:hover {
+  outline: 2px solid rgb(0, 255, 64);
+  outline-offset: 5px;
+}
+
+/* Зaoкруглення рамки */
+.footer {
+  border-radius: 10%;
+}
+
+/* Тінь тексту */
+h1 {
+  text-shadow: 2px 2px 2px #831f4d;
+}
+
+/* Тінь блоку */
+h1 {
+  box-shadow: 2px 2px 2px #831f4d;
+}
+
+/* Висота рядка */
+h1 {
+  line-height: 1.5;
+}
+
+/* Вертикальне вирівнювання */
+h1 {
+  vertical-align: baseline;
+  /* Опускаєм нижче */
+  vertical-align: sub;
+  /* Вище базової лінії тексту */
+  vertical-align: super;
+  /* Вирівнює по верхньому краю батьківського елементу */
+  vertical-align: top;
+  vertical-align: text-top;
+  vertical-align: 100%;
+  vertical-align: 20px;
+}
+
+/* Зміна курсору при наведенні */
+.example {
+  cursor: pointer;
+}
