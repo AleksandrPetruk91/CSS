@@ -529,3 +529,249 @@ h1 {
 .example {
   cursor: pointer;
 }
+
+/* Приховати елемент */
+.plans_card:nth-child(2) {
+  display: none;
+  /* Приховує елемент але місце залишається */
+  visibility: hidden;
+  /* Працює як Hidden але покращуж відображення */
+  visibility: collapse;
+}
+
+/* Обрізання блоку */
+p {
+  /* Для горизонтальної сторони */
+  overflow-y: auto;
+  /* Для вертикальної сторони */
+  overflow-x: hidden;
+  /* Текстщо вилазить приховується */
+  overflow: hidden;
+  /* Додається смужка прокрутки для тесту що вилазить за межі */
+  overflow: scroll;
+}
+
+/* Обрізання тексту  */
+p {
+  /* Якщо слово не влазить додається 3 крапки  */
+  text-overflow: ellipsis;
+  /* текст обрізається */
+  text-overflow: clip;
+}
+
+/* Пропуск білих символів */
+p {
+  /* Між словами тільки один пропуск, текст переноситься у разі потреби */
+  white-space: normal;
+  /* забороняє перенесення */
+  white-space: nowrap;
+  /* Пробіли та перенесеня як у коді */
+  white-space: pre;
+  /* Як pre, + переносить в потрібних місцях тексь */
+  white-space: pre-wrap;
+}
+
+/* Перенесення останнього слова */
+span {
+  /* По замовчуванні */
+  overflow-wrap: normal;
+  /* Розрив слова у будь-якому місці */
+  overflow-wrap: anywhere;
+  /* Розрив слова у найкращому місці */
+  overflow: brear-word;
+}
+
+/* Перенесення слів на нови рядок */
+span {
+  /* Позамовчуванню */
+  word-break: normal;
+  /* Перенесення не застосовуэться, але слова розбиваються */
+  word-break: break-all;
+  /* Забороняє розрив міжсловами */
+  word-break: keep-all;
+}
+
+/* М`який перенос слова */
+span {
+  hyphens: auto;
+  /* слова не переносяться */
+  hyphens: none;
+}
+
+/* Встановлення дефісів для перенесення тексту */
+span {
+  hyphenate-character: auto;
+}
+
+/* Інткрваи між словами */
+span {
+  word-spacing: normal;
+  word-spacing: 4px;
+}
+
+/* Зміна розміру елемента за допомогою миші */
+
+div {
+  /* Забороняє зміну розміру */
+  resize: none;
+  /* Зміна по y та по x */
+  resize: both;
+  /* По горизонталі */
+  resize: horizontal;
+  /* По вертикалі */
+  resize: vertical;
+}
+
+/* Розмір блоку по висоті */
+div {
+  block-size: 100px;
+  writing-mode: horizontal-tb;
+}
+
+/* Розмір блоку по ширині */
+div {
+  inline-size: 200px;
+  writing-mode: horizontal-tb;
+}
+
+/* Горизонтальна рамка для блоку */
+div {
+  border-block: 2px solid blue;
+  writing-mode: horizontal-tb;
+}
+
+/* Горизонтальна верхня рамка */
+div {
+  border-block-start: thick double #32a1ce;
+  writing-mode: horizontal-tb;
+}
+
+/*Горизонтальна нижня рамка  */
+div {
+  border-block-end: solid;
+  writing-mode: horizontal-tb;
+}
+
+/* Ширина горизонтальної рамки блоку */
+div {
+  border-block-width: 1px;
+  border-block-width: thin;
+  border-block-width: medium;
+  border-block-width: thick;
+}
+
+/* Стиль горизонтальної рамки блоку */
+div {
+  border-block-style: solid;
+  border-block-style: dotted;
+  border-block-style: dashed;
+  border-block-style: double;
+  border-block-style: none;
+  border-block-style: groove;
+  border-block-style: ridge;
+}
+
+/* Колір горизонтальної рамки блоку */
+div {
+  border-block-color: red;
+}
+
+/* Вертикальна рамка для блоку */
+div {
+  border-inline: solid;
+  writing-mode: horizontal-tb;
+}
+
+/* Вертикальна ліва рамка */
+div {
+  border-inline-start: thick double #32a1ce;
+  writing-mode: horizontal-tb;
+}
+
+/*Вертикальна права рамка  */
+div {
+  border-inline-end: solid;
+  writing-mode: horizontal-tb;
+}
+
+/* Відступи відносно батьківсьеого елементу */
+div {
+  inset: 10px 10% 0 20px;
+}
+
+/* Бокові відступи */
+div {
+  inset-inline: 5% 10%;
+  writing-mode: horizontal-tb;
+}
+
+/* Вертикальні відступи */
+div {
+  inset-block: 10px 20px;
+  writing-mode: horizontal-tb;
+}
+
+/* Внутрішні вертикальні відступи */
+div {
+  padding-block: 60px 70px;
+  writing-mode: horizontal-tb;
+}
+
+/* Внутрішні бокові відступи */
+div {
+  padding-inline: 20% 10%;
+  writing-mode: horizontal-tb;
+}
+
+/* Зовнішні вертикальні відступи */
+div {
+  margin-block: 40px 20px;
+  writing-mode: horizontal-tb;
+}
+
+/* Зовнішні бокові відступи */
+div {
+  margin-inline: 40px 13%;
+}
+
+/* Мінімальний розмір висоти блоку */
+div {
+  min-block-size: 100px;
+  writing-mode: horizontal-tb;
+}
+
+/* Максимальний розмір висоти блоку */
+div {
+  max-block-size: 30px;
+}
+
+/* Мінімальна ширина блоку */
+div {
+  min-inline-size: 200px;
+}
+
+/* Максимальна ширина блоку */
+div {
+  max-inline-size: 150px;
+}
+
+/* Вирівнювання тексту розширенням інтервалів */
+p {
+  text-justify: auto;
+  /* Розширення пробілів */
+  text-justify: inter-word;
+  /* Розширення символів або звуження */
+  text-justify: inter-character;
+  /* Відстані між символами та словами */
+  text-justify: distribute;
+}
+
+/* Нахил жирність ширина */
+p {
+  font-variation-settings: 'wght' 50;
+}
+
+/* Розрив рядків */
+p {
+  line-break: normal;
+}

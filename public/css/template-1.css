@@ -153,3 +153,7 @@
   outline: 2px solid rgb(0, 255, 64);
   outline-offset: 5px;
 }
+
+.plans_card:nth-child(2) {
+  display: none;
+}
