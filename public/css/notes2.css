@@ -1,0 +1,105 @@
+Фонове зображення div {
+  background-color: blue;
+  background-color: transparent;
+}
+
+div {
+  background-image: url('/img/test.png');
+  background-image: radial-gradient();
+  background-image: linear-gradient();
+  background-image: conic-gradient;
+}
+
+div {
+  background-image: url(#);
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: repeat;
+}
+
+/* Фіксація фону  */
+div {
+  background-image: url(#);
+  background-attachment: fixed;
+  background-attachment: local;
+  background-attachment: scroll;
+}
+
+/* Список */
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  list-style-image: linear-gradient();
+}
+
+li {
+  display: list-item;
+}
+
+/* Таблиця */
+.table td tr {
+  border: 1px solid #b6c2ce;
+}
+
+.table {
+  /* Колонки авто */
+  table-layout: auto;
+  /* Колонки по заданому розміру */
+  table-layout: fixed;
+  /* Ячейки таблиці об'єднані */
+  border-collapse: collapse;
+  /* Ячейки таблиці окремо */
+  border-collapse: separate;
+}
+
+/* Відступи між ячейками */
+.table {
+  border-collapse: unset;
+  border-spacing: 10px;
+  border-spacing: 10px 20px;
+
+  /* Заголовок зверху знизу */
+  caption-side: top;
+  caption-side: bottom;
+
+  /* Пуста комірка */
+  empty-cells: show;
+  empty-cells: hide;
+
+  /* Прозорість елементу */
+  opacity: 50%;
+  opacity: 0, 4;
+}
+
+/* Оформлення контенту лапки і т.д. */
+.nav_link::before,
+.nav_link::after {
+  content: img;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+
+  background-image: url();
+}
+.nav_link::before {
+  margin-right: 15px;
+}
+.nav_link::after {
+  margin-left: 15px;
+}
+
+/* СSS калькулятор */
+.calc {
+  margin-left: calc(50%- (600px / 2));
+}
+
+/* Змінні повторювані властивості */
+:root {
+  --text-color: #567889;
+  --space-medium: 24px;
+}
+
+/* Місце де використовується дана властивість */
+p {
+  color: var(--text-color);
+}
