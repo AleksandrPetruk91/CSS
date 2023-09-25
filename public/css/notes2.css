@@ -103,3 +103,64 @@ li {
 p {
   color: var(--text-color);
 }
+
+/* Розділення на стовпчики */
+p {
+  columns: 2 20px;
+
+  column-count: 2;
+
+  column-width: 200px;
+
+  /* Відстань між колонками */
+  column-gap: 30px;
+
+  /* Стиль лінії що розділяє на стовпці */
+  column-rule: solid 15px red;
+
+  /* Скількиданий елемент займає колонок */
+  column-span: all;
+
+  /* Кількість рядків на сторінці чи стовпці */
+  orphans: 4;
+
+  /* Кількість рядків нв останній сторнці чи колонці */
+  widows: 6;
+
+  /* Відокремлення елементу від інших */
+  isolation: isolate;
+
+  /* Змішання кольорів елементів */
+  mix-blend-mode: multiply;
+
+  /* Змішпння кольорів фону з об'єктом */
+  background-blend-mode: screen;
+
+  /* Скидає всі власивості елементу */
+  all: inherit;
+
+  /* Скидає усі властивості, що надає браузер */
+  appearance: none;
+
+  /* Можна вказати одночасно декілька зображень */
+  background-image: image-set(
+    'img-1x.jpg' 1x,
+    'img-2x.jpg' 2x,
+    'img-3x.jpg' 3x
+  );
+}
+
+/* Обрізка зображення  */
+.img {
+  clip-path: circle(20%);
+}
+
+/* Прив'язка прокрутки */
+div {
+  scroll-snap-type: x;
+}
+
+/* Внутрішні відступи для прокрутки */
+div {
+  scroll-padding: 20px;
+}
