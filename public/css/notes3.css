@@ -1,0 +1,31 @@
+.flex-container {
+  display: flex;
+  /* Основна лінія вертикальна */
+  flex-direction: row;
+  /* сновна лінія горизонтальна */
+  flex-direction: column;
+  /* Перенесаення контенту */
+  flex-wrap: wrap;
+  /* Центрування контенту */
+  justify-content: start;
+  justify-content: center;
+  justify-content: end;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+  justify-content: stretch;
+  /* Працює лише при "flex:wrap" */
+  /* Розміщення карток по вертикальній площині нижче */
+  align-content: center;
+
+  /* Розміри об'єкту пропорційно */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+  /* Відступи */
+  gap: 23px 12p;
+  row-gap: 2px;
+  column-gap: 34px;
+  /* Порядок елементу в списку */
+  order: 1;
+}

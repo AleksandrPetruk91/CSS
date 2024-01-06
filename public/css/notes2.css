@@ -164,3 +164,36 @@ div {
 div {
   scroll-padding: 20px;
 }
+
+/* Робота зі стовпцями */
+p {
+  columns: 2;
+}
+/* Кількість стовпців */
+p {
+  column-count: 2;
+}
+/* Ширина стовпців */
+p {
+  column-width: 200px;
+}
+
+/* Відстань між стовцями */
+p {
+  column-gap: 34px;
+}
+
+/* Стиль лінії між стовпцями */
+p {
+  column-rule: thick inset blue;
+
+  column-rule-width: (thin) (medium) (thick);
+
+  column-rule-style: (
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge
+  );
