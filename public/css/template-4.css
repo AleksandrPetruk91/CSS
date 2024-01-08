@@ -224,7 +224,7 @@
 .actions {
   display: flex;
   justify-content: space-between;
-
+  gap: 129px;
   background-color: var(--color-violet);
   padding: var(--space-l);
   border-radius: var(--border-radius);
@@ -237,21 +237,23 @@
   flex-direction: column;
   gap: var(--space-m);
   width: 100%;
-  max-width: 159px;
 }
 
 .actions_heading {
-  font-size: var(--size-l);
+  font-size: 24px;
   font-weight: var(--weight-text);
   color: var(--color-white);
   line-height: var(--size-m);
 }
 
-.actions_info {
+.actions_button {
   display: flex;
   justify-content: center;
   background-color: var(--color-white);
-  font-size: var(--size-m);
+  font-size: var(--size-l);
   font-weight: var(--weight-text);
   color: var(--color-title);
+  text-decoration: none;
+  padding: var(--space-xm);
+  border-radius: 4.8px;
 }
