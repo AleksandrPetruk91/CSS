@@ -43,6 +43,12 @@
   border-bottom: 1px solid var(--color-border);
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  max-width: 1000px;
+  width: 100%;
+
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 .logo {
@@ -119,7 +125,7 @@
 .hero {
   display: flex;
   align-items: center;
-  gap: --space-b;
+  gap: var(--space-b);
   padding: var(--space-b);
   border-bottom: 1px solid var(--color-border);
 }
@@ -232,4 +238,97 @@
   width: 100%;
   max-width: 160px;
   color: var(--color-text);
+}
+
+.hero_slider_icon {
+  background-color: var(--color-primary);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+
+  position: absolute;
+
+  top: calc(50% - 15px);
+}
+
+.hero_slider_icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hero_slider {
+  position: relative;
+}
+
+.hero_slider_left {
+  left: var(--space-l);
+}
+
+.hero_slider_right {
+  right: var(--space-l);
+}
+
+.modal {
+  position: sticky;
+  top: 0;
+  right: 24px;
+
+  width: 600px;
+  background: black;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 24px;
+  line-height: 150%;
+  z-index: 1;
+}
+
+.modal_image {
+  height: 100px;
+  width: 100px;
+  height: 50px;
+  width: 300px;
+
+  /* Зміна розміру медіа */
+  /* Орігинальне зображення */
+  /* object-fit: none; */
+
+  /* Повністю поміщається в контейнер */
+  /* object-fit: contain; */
+
+  /* ЗМеншене або збільшене для пропорції сторін */
+  /* object-fit: cover; */
+
+  /* Зображення зменшене якщо більше контейнера */
+  object-fit: scale-down;
+
+  /* Розміщення зображення в контейері */
+  object-position: top right;
+
+  /* Обтікання тексту */
+  float: left;
+
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+/* Заборона обтіканню */
+.modal_text {
+  clear: left;
+
+  /* Заборона виділяти текст */
+  user-select: none;
+}
+
+input {
+  border: 3px solid var(--color-primary);
+  caret-color: rgb(255, 0, 76);
+}
+
+/* Плавне прокручування сторінки при переході  */
+:root {
+  scroll-behavior: smooth;
 }
