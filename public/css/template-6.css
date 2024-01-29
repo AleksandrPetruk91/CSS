@@ -314,7 +314,7 @@
   padding: 12px 24px;
   transform: rotate(30deg);
 
-  color: var(--color-whites);
+  color: var(--color-white);
   font-size: var(--size-24);
   font-weight: 700;
   line-height: 120%;
@@ -350,9 +350,4 @@
   font-size: var(--size-16);
   line-height: 22px;
   font-weight: var(--weight-text);
-}
-
-.advanteges > div:nth-of-type(2) {
-  flex-grow: 1;
-  width: 100%;
 }
