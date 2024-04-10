@@ -1,0 +1,31 @@
+<header class='header'>
+  {{#with header}}
+  
+    <a href="#test">
+      {{>logo_t7 }}
+    </a>
+
+    <nav class='header_nav '>
+      <div class="header_nav_right">
+          {{>nav list=header}}
+      </div>    
+    </nav>
+  {{/with}}
+</header>
+
+
+
+<footer class="footer" id="test" >
+  <div >
+      {{> logo}}
+      <span class="footer_copyright">Copyright 2023-2024</span>
+  </div>
+
+  {{#each footer}}
+    <div >
+      <span class="footer_title"><b>{{title}}</b></span>
+      {{>nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+</footer>
+
