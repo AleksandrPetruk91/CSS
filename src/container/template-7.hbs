@@ -1,23 +1,61 @@
-<header class='header'>
-  {{#with header}}
-  
-    <a href="#test">
-      {{>logo_t7 }}
-    </a>
+  <header class='header'>
+    {{#with header}}
+      <div class="section_header_main">
+        {{>logo_t7 }}
 
-    <nav class='header_nav '>
-      <div class="header_nav_right">
-          {{>nav list=header}}
-      </div>    
-    </nav>
-  {{/with}}
-</header>
+        <nav class='header_nav'>
+          {{>nav list=links}}   
+        </nav>
+      </div> 
 
+      <div class="section_header_secondary">
+        {{#with ad}}
+          <div class="section_header_secondary_left">          
+            <div class='logo_ad'>
+              <span class='logo_ad_text'>Ad</span>
+            </div>
 
+            <span class='text_ad'>{{text}}:</span>
+
+            <a class="url_ad" href="{{url}}">{{url}}</a>
+          </div>
+        {{/with}}
+
+        <div class="section_header_secondary_right"><span class="text_user_online">User online:</span>{{userOnline}}</div>
+      </div>
+    {{/with}}
+  </header>
+
+  <main class="hero">
+    {{#with hero}}
+      {{>hero title=title text=description}}
+      <a class="button" href="{{button.url}}">{{button.text}}</a>
+    {{/with}}
+  </main>
+
+  <section class="about">
+    {{#with about}}
+      <h1 class='about_title'>{{heading}}</h1>
+      <p class='about_text'>{{ info}}</p>
+    {{/with}}
+  </section>
+
+  <section class="articles">
+    <div class="articles_header">
+      <p class="articles_title">Our articles</p>
+      <buttton class="articles_button">View All</buttton>
+    </div>
+
+    <div class="articles_card">
+      {{#each articles}}
+        {{>card_articles data=this}}
+      {{/each}}
+    </div>
+  </section>
+    
 
 <footer class="footer" id="test" >
   <div >
-      {{> logo}}
       <span class="footer_copyright">Copyright 2023-2024</span>
   </div>
 

@@ -72,8 +72,14 @@
   align-items: center;
 }
 
+.header_nav {
+  display: flex;
+}
+
 .nav {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav_inline {
