@@ -5,14 +5,20 @@
       src='{{photo}}'
       alt='Featured-img'
     />
+
     <h2 class='card_title'>
       {{name}}
     </h2>
+
     <p class='card_text'>
       {{description}}
     </p>
+
     <a href='#' class='card_link'>
       Read All
     </a>
+
+    <p class='{{#if isNew }} card_badge {{/if}}'>NEW</p>
+
   </div>
 {{/with}}
