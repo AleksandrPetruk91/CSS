@@ -1,0 +1,27 @@
+  <header class='header'>
+    {{#with header}}
+      <div class="section_header_main">
+        {{>logo_t7 }}
+
+        <nav class='header_nav'>
+          {{>nav list=links}}   
+        </nav>
+      </div> 
+
+      <div class="section_header_secondary">
+        {{#with ad}}
+          <div class="section_header_secondary_left">          
+            <div class='logo_ad'>
+              <span class='logo_ad_text'>Ad</span>
+            </div>
+
+            <span class='text_ad'>{{text}}:</span>
+
+            <a class="url_ad" href="{{url}}">{{url}}</a>
+          </div>
+        {{/with}}
+
+        <div class="section_header_secondary_right"><span class="text_user_online">User online:</span>{{userOnline}}</div>
+      </div>
+    {{/with}}
+  </header>
