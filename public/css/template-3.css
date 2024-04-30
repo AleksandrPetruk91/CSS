@@ -1,3 +1,17 @@
+@import '/css/var.css';
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+
 .page {
   background: var(--color-white);
   padding: 0 15px;
@@ -14,6 +28,8 @@
   flex-direction: column;
   gap: 80px;
 }
+
+@layer main, secondary, style;
 
 @keyframes fly {
   from {
@@ -41,27 +57,6 @@
   }
 }
 
-:root {
-  --space-m: 12px;
-  --space-xm: 16px;
-  --space-l: 24px;
-  --space-b: 36px;
-
-  --size-s: 14px;
-  --size-m: 16px;
-  --size-l: 20px;
-
-  --color-border: #dee2e6;
-  --color-primary: rgb(46, 46, 255);
-  --color-white: #ffffff;
-  --color-title: #212529;
-  --color-text: #343a40;
-
-  --border-radius: 12px;
-
-  --weight-title: 500px;
-  --weight-text: 400px;
-}
 /* ================================ */
 
 .header {
@@ -158,6 +153,7 @@
   align-items: center;
   gap: var(--space-b);
   padding: var(--space-b);
+  padding-top: 100px;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -220,26 +216,30 @@
   color: var(--color-text);
 }
 
-.button {
-  display: inline-block;
-  font-size: var(--size-m);
-  text-decoration: none;
-  padding: var(--space-m) var(--space-xm);
-  border-radius: var(--border-radius);
+@layer main {
+  .button {
+    display: inline-block;
+    font-size: var(--size-m);
+    text-decoration: none;
+    padding: var(--space-m) var(--space-xm);
+    border-radius: var(--border-radius);
 
-  transition-property: opacity, background, color;
-  transition-duration: 1s;
+    transition-property: opacity, background, color;
+    transition-duration: 1s;
+  }
+
+  .button:hover {
+    opacity: 0.7;
+    background: rgb(51, 233, 51);
+    color: black;
+  }
 }
 
-.card_button {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-}
-
-.button:hover {
-  opacity: 0.7;
-  background: rgb(51, 233, 51);
-  color: black;
+@layer component {
+  .card_button {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
 }
 
 .form {
@@ -454,4 +454,39 @@ input {
     align-items: center;
     text-align: center;
   }
+}
+
+/* .hero_container {
+  container-type: inline-size;
+  container-name: hero;
+}
+
+@container hero (width < 1000px) {
+  .hero {
+    flex-direction: column;
+  } */
+
+@layer styler {
+  .card_button {
+    background: red;
+  }
+}
+.ex {
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 1ex;
+}
+
+/* .test{
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100vw;
+} */
+
+.hero_title {
+  font-size: 5cqw;
 }

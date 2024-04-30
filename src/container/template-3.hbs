@@ -13,18 +13,19 @@
 
 
 {{#with hero}}
-  <div class="hero">
-    <div class="hero_content">
-      <h1 class="hero_title">{{title}}</h1>
-      <p class="hero_text">{{text}}</p>
+  <div class="hero_container">
+    <div class="hero">
+      <div class="hero_content">
+        <h1 class="hero_title">{{title}}</h1>
+        <p class="hero_text">{{text}}</p>
+      </div>
+      <div class="hero_slider">
+        <div class="hero_slider_icon hero_slider_left">{{left}}</div>
+        <img src="{{photo}}" alt="Hero image" class="hero_image">
+        <div class="hero_slider_icon hero_slider_right">{{right}}</div>
+      </div>
     </div>
-    <div class="hero_slider">
-      <div class="hero_slider_icon hero_slider_left">{{left}}</div>
-      <img src="{{photo}}" alt="Hero image" class="hero_image">
-      <div class="hero_slider_icon hero_slider_right">{{right}}</div>
-    </div>
-    
-  </div>
+  </div> 
 {{/with}}
 
 
@@ -54,18 +55,21 @@
   {{/each}}
 </main>
 
-{{#with form}}
-  <div class="form">
-    <div class="form_content">
-      <h3 class="form_title">{{title}}</h3>
-      <p class="form_info">{{info}}</p>
-    </div>
+  {{#with form}}
 
-    <div class="form_action">
-      <a class="form_button button" href="{{href}}">{{button}}</a>
+    <div class="form">
+      <div class="form_content">
+        <h3 class="form_title">{{title}}</h3>
+        <p class="form_info">{{info}}<span class="ex">x</span></p>
+      </div>
+
+      <div class="form_action">
+        <a class="form_button button" href="{{href}}">{{button}}</a>
+      </div>
     </div>
-  </div>
-{{/with}}
+  {{/with}}
+
+
 <footer class="footer" id="test" >
   <div >
       {{> logo}}
@@ -78,5 +82,7 @@
       {{>nav list=links isVertical=true}}
     </div>
   {{/each}}
+  
 </footer>
 
+<div class="test">Test</div>
