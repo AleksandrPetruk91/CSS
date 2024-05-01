@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url(/font/HelveticaNeueBold.ttf);
+}
+
+body {
+  font-family: 'HelveticaNeueBold', sans-serif;
+  background-color: var(--color-white);
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-primary: #611f69;
+
+  --page-width-1200: 1200px;
+  --page-width-1000: 1000px;
+  --page-width-700: 700px;
+
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+
+  --size-14: 14px;
+  --size-18: 18px;
+  --size-22: 22px;
+}
+
+.page {
+  display: grid;
+}
+
+.page_section {
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  width: 100%;
+
+  padding: var(--spacing-16);
+}
+
+@media all and (1260px <= width) {
+  .page_content {
+    width: 100%;
+    max-width: var(--page-width-1200);
+  }
+}
+
+@media all and (1000px <= width < 1260px) {
+  .page_content {
+    width: 100%;
+    max-width: var(--page-width-1000);
+  }
+}
+
+@media all and (width < 1000px) {
+  .page_content {
+    width: 100%;
+    max-width: var(--page-width-700);
+  }
+}
+
+.hero_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+}
+
+.hero {
+  display: grid;
+  gap: var(--spacing-20);
+  max-width: 425px;
+  height: 100%;
+  align-content: center;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: var(--spacing-36);
+  row-gap: var(--spacing-20);
+  flex-wrap: wrap;
+}
+
+.hero_img {
+  position: absolute;
+  display: none;
+}
