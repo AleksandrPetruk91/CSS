@@ -1,3 +1,5 @@
+@layer component, variant;
+
 @font-face {
   font-family: 'HelveticaNeueBold';
   src: url(/font/HelveticaNeueBold.ttf);
@@ -12,6 +14,7 @@ body {
   --color-white: #ffffff;
   --color-black: #000;
   --color-primary: #611f69;
+  --color-light: #f4ede4;
 
   --page-width-1200: 1200px;
   --page-width-1000: 1000px;
@@ -29,15 +32,27 @@ body {
   --size-14: 14px;
   --size-18: 18px;
   --size-22: 22px;
+  --size-26: 26px;
+  --size-30: 30px;
+  --size-34: 34px;
+
+  --radius-4: 4px;
+
+  --opacity-1: 0.7;
+  --opacity-2: 0.3;
+
+  --transition-1: 0.7s;
 }
 
 .page {
   display: grid;
 }
 
-.page_section {
-  display: flex;
-  justify-content: center;
+@layer component {
+  .page_section {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .page_content {
@@ -71,18 +86,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 35px;
-  position: relative;
+  gap: 200px;
+
   height: 60vh;
-  min-height: 400px;
+  min-height: 680px;
 }
 
 .hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero_content {
+  position: relative;
   display: grid;
   gap: var(--spacing-20);
   max-width: 425px;
-  height: 100%;
-  align-content: center;
+  color: var(--color-black);
 }
 
 .brands {
@@ -96,5 +117,112 @@ body {
 
 .hero_img {
   position: absolute;
-  display: none;
+  left: 580px;
+  top: 0px;
+}
+
+.hero_lable {
+  font-size: var(--size-14);
+}
+
+.hero_title {
+  font-size: 50px;
+}
+
+.hero_info {
+  font-size: var(--size-22);
+}
+
+.hero_buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-16);
+}
+
+@layer {
+  .button {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: var(--spacing-16);
+    border-radius: var(--radius-4);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: opacity var(--transition-1);
+  }
+
+  .click:hover {
+    opacity: var(--opacity-1);
+    cursor: pointer;
+  }
+
+  .click:active {
+    opacity: var(--opacity-2);
+  }
+}
+
+@layer {
+  .button_primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+
+  .button_secondary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-width: 2px;
+  }
+}
+
+.feature_section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: grid;
+  gap: 24px;
+}
+
+@layer variant {
+  .page_section_light {
+    background-color: var(--color-light);
+  }
+}
+
+.features_title {
+  font-size: var(--size-34);
+}
+
+.features_description {
+  font-size: var(--size-18);
+}
+
+.feat_card {
+  display: grid;
+  padding: var(--spacing-16);
+  background-color: var(--color-white);
+  gap: var(--spacing-16);
+}
+
+@layer component {
+  .icon {
+    display: block;
+
+    background-repeat: no-repeat;
+    background: center center;
+  }
+}
+
+@layer variant {
+  .feat_icon {
+    height: 48px;
+    width: 48px;
+  }
+
+  .icon_arrow {
+    height: 14px;
+    width: 24px;
+    background-image: url('/svg/arrow-right.svg');
+  }
+}
+
+.feat_link {
+  justify-self: flex-end;
 }
