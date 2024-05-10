@@ -57,6 +57,18 @@
     background-image: url('/svg/arrow-right.svg');
   }
 
+  .icon_arrow {
+    height: 14px;
+    width: 24px;
+    background-image: url('/svg/arrow-right-blue.svg');
+  }
+
+  .blue_link {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+  }
+
   .page_section_light {
     background-color: var(--color-light);
   }
@@ -130,7 +142,6 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 200px;
-
     min-height: 600px;
   }
 
@@ -164,8 +175,13 @@ body {
     top: 0px;
   }
 
-  .hero_lable,
-  .card_text {
+  .hero_img_second {
+    position: absolute;
+    left: 580px;
+    top: 0px;
+  }
+
+  .hero_lable {
     font-size: var(--size-14);
   }
 
@@ -270,6 +286,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-bottom: 80px;
   }
 
   .hero_cards_title {
@@ -290,10 +307,18 @@ body {
     grid-template-rows: min-content min-content 1fr min-content;
     gap: 8px;
     min-height: 420px;
+    max-width: 285px;
+    box-shadow: 1px 1px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .card_text {
+    font-size: var(--size-14);
+    margin-left: var(--spacing-16);
   }
 
   .card_title {
-    font-size: var(--size-26);
+    font-size: var(--spacing-24);
+    margin-left: var(--spacing-16);
   }
 
   .card_link_text {
@@ -326,6 +351,11 @@ body {
     .hero_img {
       left: 518px;
       height: 300px;
+    }
+
+    .hero_img_second {
+      left: 1px;
+      height: 1px;
     }
   }
 
