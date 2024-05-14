@@ -149,6 +149,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 150px;
     min-height: 600px;
   }
@@ -166,7 +167,7 @@ body {
     align-items: center;
     justify-content: flex-end;
     margin-top: 50px;
-    max-width: 1020px;
+    width: 1020px;
   }
 
   .hero_content {
@@ -181,14 +182,14 @@ body {
     position: relative;
     display: grid;
     gap: var(--spacing-20);
-    max-width: 425px;
+    max-width: 387px;
     color: var(--color-black);
   }
 
   .hero_img_second {
     position: absolute;
-    right: 611px;
-    bottom: 10px;
+    right: 463px;
+    bottom: 26px;
   }
 
   .brands {
@@ -381,8 +382,10 @@ body {
     }
 
     .hero_img_second {
-      left: 1px;
-      top: 1px;
+      position: absolute;
+      right: 404px;
+      height: 221px;
+      bottom: 27px;
     }
   }
 
@@ -391,7 +394,11 @@ body {
       max-width: var(--page-width-700);
     }
 
-    .features_grid_4 {
+    .hero_section_second {
+      max-width: 600px;
+    }
+
+    .hero .features_grid_4 {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -401,9 +408,20 @@ body {
       order: -1;
     }
 
+    .hero_img_second {
+      position: static;
+      width: 100%;
+      order: -1;
+    }
+
     .hero_content {
       max-width: 100%;
     }
+
+    .hero_content_second {
+      max-width: 100%;
+    }
+
     .feature_section,
     .feature_section_second {
       background-image: none;
