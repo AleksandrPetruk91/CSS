@@ -167,7 +167,8 @@ body {
     align-items: center;
     justify-content: flex-end;
     margin-top: 50px;
-    width: 1020px;
+    width: 100%;
+    max-width: 1020px;
   }
 
   .hero_content {
@@ -269,7 +270,7 @@ body {
     background-color: var(--color-white);
     gap: var(--spacing-16);
     font-size: var(--size-18);
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-rows: min-content min-content 1fr;
   }
 
   .feat_link {
@@ -313,6 +314,7 @@ body {
     flex-direction: column;
     gap: 40px;
     margin-bottom: 80px;
+    width: 100%;
     max-width: 1005px;
   }
 
@@ -375,6 +377,10 @@ body {
       max-width: var(--page-width-1000);
     }
 
+    .features_text {
+      width: 500px;
+    }
+
     .hero_img {
       position: absolute;
       left: 518px;
@@ -398,8 +404,13 @@ body {
       max-width: 600px;
     }
 
-    .hero .features_grid_4 {
+    .hero,
+    .features_grid_4 {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features_text {
+      padding: 60px 0px;
     }
 
     .hero_img {
@@ -422,26 +433,39 @@ body {
       max-width: 100%;
     }
 
-    .feature_section,
+    .feature_section {
+      background-image: none;
+    }
+
     .feature_section_second {
       background-image: none;
+      display: block;
     }
   }
 
   @media all and (width < 600px) {
-    .features_grid_4 {
+    .features_grid_4,
+    .features_grid_3 {
       grid-template-columns: 2fr 2fr;
     }
   }
 
   @media all and (width < 400px) {
-    .features_grid_4 {
+    .features_grid_4,
+    .features_grid_3 {
       grid-template-columns: 1fr;
     }
 
     .hero_buttons {
       grid-template-columns: 1fr;
       gap: var(--spacing-16);
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 30px;
+      justify-content: center;
     }
   }
 }
