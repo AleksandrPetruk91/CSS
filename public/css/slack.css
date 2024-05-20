@@ -396,12 +396,18 @@ body {
   }
 
   @media all and (width < 1000px) {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
     .page_content {
       max-width: var(--page-width-700);
     }
 
     .hero_section_second {
-      max-width: 600px;
+      max-width: 700px;
     }
 
     .hero,
@@ -456,9 +462,13 @@ body {
       grid-template-columns: 1fr;
     }
 
-    .hero_buttons {
+    .features_grid_3 .hero_buttons {
       grid-template-columns: 1fr;
       gap: var(--spacing-16);
+    }
+
+    .feat_card_3:nth-of-type(2) {
+      grid-row: 3 / 5;
     }
 
     .cards {
@@ -466,6 +476,11 @@ body {
       flex-wrap: wrap;
       row-gap: 30px;
       justify-content: center;
+    }
+
+    .hero_buttons {
+      display: grid;
+      grid-template-columns: 1fr;
     }
   }
 }
