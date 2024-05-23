@@ -35,6 +35,7 @@ body {
   --size-12: 12px;
   --size-16: 16px;
   --size-20: 20px;
+  --size-24: 24px;
   --size-26: 24px;
   --size-30: 32px;
   --size-34: 38px;
@@ -62,9 +63,17 @@ body {
     gap: var(--spacing-40);
   }
 
-  .page__aside {
+  .aside {
     padding: var(--spacing-24);
     background-color: var(--color-black);
+    display: grid;
+    gap: var(--spacing-24);
+    align-content: flex-start;
+  }
+
+  .aside_nav {
+    display: grid;
+    pad: var(--spacing-12);
   }
 }
 
@@ -75,6 +84,9 @@ body {
 
   .aside__logo {
     color: var(--color-white);
+    font-size: var(--size-24);
+    padding-bottom: var(--size-24);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   }
 }
 
