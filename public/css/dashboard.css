@@ -420,6 +420,16 @@ body {
   .text-green {
     color: #00801b;
   }
+
+  .label {
+    line-height: 0.9;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 @layer adaptive {
