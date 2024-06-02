@@ -66,6 +66,12 @@ body {
   .vertical {
     display: grid;
     gap: var(--size-24);
+    height: fit-content;
+  }
+
+  .inputs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
   }
 
   .aside {
@@ -161,6 +167,12 @@ body {
     row-gap: 12px;
     width: 100%;
   }
+
+  .select-horisontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-24);
+  }
 }
 
 @layer element {
@@ -169,8 +181,15 @@ body {
     gap: var(--spacing-24);
     width: 100%;
     max-width: 810px;
-    height: fit-content;
   }
+
+  .payment__block {
+    justify-content: normal;
+    gap: var(--spacing-24);
+    width: 100%;
+    max-width: 485px;
+  }
+
   .page__aside {
     grid-row: 1/3;
   }
@@ -252,7 +271,7 @@ body {
 
   .field__arrow {
     position: absolute;
-    top: calc(50% - (12px / 2));
+    top: 60%;
     right: var(--size-12);
   }
 
@@ -287,7 +306,7 @@ body {
 
   .border__line {
     border-top: 1px solid var(--color-light);
-    padding: 24px 0;
+    padding: 24px 0 0 0;
   }
 }
 
@@ -329,6 +348,10 @@ body {
   .vertical--small {
     line-height: 0.9;
     gap: var(--spacing-12);
+  }
+
+  .vertical--8 {
+    gap: var(--spacing-8);
   }
 
   .vertical--big {
@@ -429,6 +452,18 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  .padding-bottom {
+    padding-bottom: var(--spacing-8);
+  }
+
+  .analytic--strech {
+    align-items: stretch;
+  }
+
+  .nav-button--center {
+    justify-content: center;
   }
 }
 

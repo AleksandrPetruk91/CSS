@@ -86,21 +86,6 @@
             <span class='text text--light'>Products</span>
           </a>
 
-          <div class='relative click'>
-            <div class='field field--select relative'>
-              <span class='text text--light'>
-                Choose...
-              </span>
-            </div>
-            <select class='field__select'>
-              <option value='dog'>Dog</option>
-              <option value='dog'>Dog</option>
-            </select>
-            <span
-              class='field__arrow nav-button__arrow icon'
-              style='background-image: url(/svg/arrow/arrow-bottom.svg);'
-            ></span>
-          </div>
         </nav>
       </aside>
 
@@ -266,9 +251,13 @@
             </div>
           </section>
 
-          <section class='box vertical'>
-            <h2 class='text text--heading'>Payment</h2>
-            <div class='vertical'>
+          <section
+            class='box analytic payment__block analytic--strech'
+          >
+
+            <p class='text text--heading'>Payment</p>
+
+            <div class='vertical border__line'>
               <div class='vertical vertical--small'>
                 <div class='radio'>
                   <input
@@ -309,6 +298,90 @@
 
               </div>
             </div>
+
+            <div class='inputs vertical'>
+              <div class='vertical vertical--8'>
+                <h3 class='text text--small'>
+                  Name on card
+                </h3>
+                <input type='text' class='text field' />
+              </div>
+              <div class='vertical vertical--8'>
+                <h3 class='text text--small'>
+                  Credit card number
+                </h3>
+                <input type='text' class='text field' />
+              </div>
+              <div class='vertical vertical--8'>
+                <p class='text text--small'>
+                  Expiration
+                </p>
+                <input type='text' class='text field' />
+              </div>
+              <div class='vertical vertical--8'>
+                <h3 class='text text--small'>
+                  CVV
+                </h3>
+                <input type='text' class='text field' />
+              </div>
+            </div>
+
+            <div class='select-horisontal border__line'>
+              <div class='relative click'>
+                <p class='text text--small padding-bottom'>
+                  Country
+                </p>
+
+                <div class='field field--select relative'>
+                  <span class='text text--light'>
+                    Choose...
+                  </span>
+                </div>
+
+                <select class='field__select'>
+                  <option value='first'>First</option>
+                  <option value='second'>Second</option>
+                </select>
+
+                <span
+                  class='field__arrow nav-button__arrow icon'
+                  style='background-image: url(/svg/arrow/arrow-bottom.svg);'
+                ></span>
+              </div>
+
+              <div class='relative click'>
+                <p class='text text--small padding-bottom'>
+                  State
+                </p>
+                <div class='field field--select relative'>
+                  <span class='text text--light'>
+                    Choose...
+                  </span>
+                </div>
+                <select class='field__select'>
+                  <option value='first'>First</option>
+                  <option value='second'>Second</option>
+                </select>
+                <span
+                  class='field__arrow nav-button__arrow icon'
+                  style='background-image: url(/svg/arrow/arrow-bottom.svg);'
+                ></span>
+              </div>
+            </div>
+
+            <button
+              class='vertical border__line vertical--small'
+            >
+              <a
+                href='#'
+                class='nav-button nav-button__active click nav-button--center'
+              >
+                <span class='text text--light'>Continue to
+                  checkout</span>
+              </a>
+
+            </button>
+
           </section>
         </div>
       </main>
